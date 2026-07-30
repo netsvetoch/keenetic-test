@@ -32,7 +32,7 @@ describe('RouteTableComponent', () => {
     expect(addresses.indexOf('8.8.8.8')).toBeLessThan(addresses.indexOf('10.0.0.0'));
   });
 
-  it('toggles direction when clicking the same column header twice', async () => {
+  it('toggles direction when clicking the active column header', async () => {
     const fixture = await setup();
     const headers = fixture.nativeElement.querySelectorAll('th button');
     (headers[0] as HTMLButtonElement).click();

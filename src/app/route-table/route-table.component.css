@@ -40,10 +40,14 @@
   cursor: pointer;
 }
 
-.routes-table th button:hover,
+.routes-table th button:hover {
+  color: #ffffff;
+}
+
 .routes-table th button:focus-visible {
   color: #ffffff;
-  outline: none;
+  outline: 2px solid #4fc3f7;
+  outline-offset: -2px;
 }
 
 .routes-table th.sorted button {
