@@ -1,0 +1,37 @@
+@if (sortedRoutes$ | async; as routes) {
+  @if (sortState$ | async; as sort) {
+    <table class="routes-table">
+      <caption>
+        Список маршрутов
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col" [class.sorted]="sort.column === 'address'">
+            <button type="button" (click)="toggleSort('address')">
+              Адрес назначения {{ arrow(sort, 'address') }}
+            </button>
+          </th>
+          <th scope="col" [class.sorted]="sort.column === 'gateway'">
+            <button type="button" (click)="toggleSort('gateway')">
+              Шлюз {{ arrow(sort, 'gateway') }}
+            </button>
+          </th>
+          <th scope="col" [class.sorted]="sort.column === 'interface'">
+            <button type="button" (click)="toggleSort('interface')">
+              Интерфейс {{ arrow(sort, 'interface') }}
+            </button>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (route of routes; track route.uuid) {
+          <tr>
+            <td>{{ route.address }} / {{ route.mask }}</td>
+            <td>{{ route.gateway }}</td>
+            <td>{{ route.interface }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  }
+}
