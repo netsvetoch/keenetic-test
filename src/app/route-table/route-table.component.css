@@ -2,7 +2,12 @@
   display: block;
   max-width: 900px;
   margin: 2rem auto;
-  font-family: 'Inter', -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-family:
+    'Inter',
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    sans-serif;
 }
 
 .routes-table {

@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "prettier": "prettier . --check --log-level error",
+    "prettier:fix": "prettier . --write --log-level error"
   },
   "private": true,
   "packageManager": "pnpm@11.18.0",
